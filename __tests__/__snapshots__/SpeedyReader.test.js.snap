@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SpeedyReader render  should render all the words of the inputText when wordChunk is greater than number of words 1`] = `
+<span>
+  This is a test
+</span>
+`;
+
+exports[`SpeedyReader render  should render the first word of the inputText when text is not whitespace and wordChunk is one 1`] = `
+<span>
+  This
+</span>
+`;
+
+exports[`SpeedyReader render  should render the three words of the inputText when text is more than three words in length and wordChunk is three 1`] = `
+<span>
+  This is a
+</span>
+`;
+
+exports[`SpeedyReader render should render blank when inputText is whitespace 1`] = `
+<span>
+   
+</span>
+`;

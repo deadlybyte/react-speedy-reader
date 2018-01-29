@@ -1,0 +1,71 @@
+---
+  root: true
+  # Refer to docs/javascript/README.md for detail
+  extends: airbnb
+
+  parser: babel-eslint
+
+  env:
+    browser: true
+    amd: true
+    mocha: true
+    jest: true
+    # These globals should not be enabled in production code.
+    # Not all browsers support es6 globals, and none of them support node globals.
+    node: false
+    es6: false
+
+  # DO NOT ADD any values to this list without thorough browser compatibility review.
+  globals:
+    Uint8Array: true
+
+  rules:
+    no-restricted-globals:
+      - error
+      # It is not supported in IE. Please use 'bluebird' library instead.
+      - Promise
+
+    # Use 'windows' linebreak
+    linebreak-style:
+      - off
+
+    # Enforce valid JSDoc comments whenever we have it in the code.
+    valid-jsdoc:
+      - error
+
+    # Only used to flag the static method, but can not be forced
+    class-methods-use-this: 0
+
+    # Require to have function name: http://eslint.org/docs/rules/func-names
+    func-names:
+      - error
+      - as-needed
+
+    # For consistent, we prefer to import the module with import { SomeThing } from SomeThing,
+    # which will make sure named import as exported name.
+    import/prefer-default-export: 0
+
+    # Ensure consistent use of file extension within the import path
+    # https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/extensions.md
+    import/extensions:
+      - error
+      - always
+      - js: never
+        jsx: never
+        es: never
+
+    # Disable trailing comma for function declaration and function calls due to jsdoc syntax requirement
+    comma-dangle:
+      - error
+      - arrays: always-multiline
+        objects: always-multiline
+        imports: ignore
+        exports: ignore
+        functions: never
+
+    react/jsx-filename-extension:
+      - 1
+      - extensions:
+        - ".js"
+        - ".jsx"
+
