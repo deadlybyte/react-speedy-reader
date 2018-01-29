@@ -8,6 +8,6 @@ src
 .editorconfig
 .eslintrc.yaml
 .gitignore
-.travis.yaml
+.travis.yml
 jsdoc.config.json
 webpack.config.js
