@@ -26,6 +26,10 @@
     "jsdoc": "jsdoc -c ./jsdoc.config.json -d ./jsdoc",
     "start": "cd demo/default && webpack-dev-server --hot --inline --colors --config ./webpack.dev.config.js"
   },
+  "peerDependencies": {
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
+  },
   "devDependencies": {
     "@types/enzyme": "^3.1.8",
     "@types/expect": "^1.20.2",
@@ -54,15 +58,15 @@
     "open-browser-webpack-plugin": "0.0.5",
     "pre-commit": "^1.2.2",
     "raf": "^3.4.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
     "react-hot-loader": "^3.1.1",
     "react-test-renderer": "^16.1.0",
     "webpack": "^3.8.1",
     "webpack-dev-server": "^2.9.3"
   },
   "dependencies": {
-    "prop-types": "^15.6.0",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0"
+    "prop-types": "^15.6.0"
   },
   "jest": {
     "collectCoverage": true,
