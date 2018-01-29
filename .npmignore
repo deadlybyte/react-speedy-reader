@@ -1,0 +1,13 @@
+__tests__
+.vscode
+coverage
+demo
+jsdoc
+src
+.babelrc
+.editorconfig
+.eslintrc.yaml
+.gitignore
+.travis.yaml
+jsdoc.config.json
+webpack.config.js
