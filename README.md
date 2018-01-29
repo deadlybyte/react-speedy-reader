@@ -71,7 +71,7 @@ Resets the speedy reader to the initial state.
 
 ## Documentation
 
-Please read [JSDocs](jsdoc) for more information.
+Please read JSDocs for more information.
 
 ## Built With
 
