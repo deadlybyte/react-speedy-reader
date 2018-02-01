@@ -88,6 +88,17 @@ class SpeedyReader extends Component {
     }
   }
 
+  componentWillReceiveProps(nextProps) {
+    const { speed, wordChunk } = this.props;
+    const { isPlaying } = this.state;
+    const needsUpdating = isPlaying &&
+      (nextProps.speed !== speed || nextProps.wordChunk !== wordChunk);
+
+    if (needsUpdating) {
+      this.update();
+    }
+  }
+
   componentWillUnmount() {
     if (this.timer) {
       clearTimeout(this.timer);

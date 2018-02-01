@@ -79,6 +79,82 @@ describe('SpeedyReader', () => {
     });
   });
 
+  describe('componentWillReceiveProps', () => {
+    let updateSpy;
+
+    beforeEach(() => {
+      updateSpy = jest.spyOn(SpeedyReader.prototype, 'update');
+    });
+
+    afterEach(() => {
+      updateSpy.mockClear();
+    });
+
+    describe('speed', () => {
+      it('should call update if the speed has changed and is playing', () => {
+        const componentUnderTest = shallow(<SpeedyReader autoPlay inputText="This is a test" speed={1} />);
+
+        componentUnderTest.setProps({
+          speed: 2
+        });
+
+        expect(updateSpy).toHaveBeenCalledTimes(2);
+      });
+
+      it('should not call update if the speed prop has not changed', () => {
+        const componentUnderTest = shallow(<SpeedyReader autoPlay inputText="This is a test" speed={1} />);
+
+        componentUnderTest.setProps({
+          speed: 1
+        });
+
+        expect(updateSpy).toHaveBeenCalledTimes(1);
+      });
+
+      it('should not call update if the speed prop changes and current not playing', () => {
+        const componentUnderTest = shallow(<SpeedyReader autoPlay={false} inputText="This is a test" speed={1} />);
+
+        componentUnderTest.setProps({
+          speed: 2
+        });
+
+        expect(updateSpy).toHaveBeenCalledTimes(0);
+      });
+    });
+
+    describe('wordChunk', () => {
+      it('should call update if the wordChunk has changed and is playing', () => {
+        const componentUnderTest = shallow(<SpeedyReader autoPlay inputText="This is a test" speed={1} wordChunk={1} />);
+
+        componentUnderTest.setProps({
+          wordChunk: 2
+        });
+
+        expect(updateSpy).toHaveBeenCalledTimes(2);
+      });
+
+      it('should not call update if the wordChunk prop has not changed', () => {
+        const componentUnderTest = shallow(<SpeedyReader autoPlay inputText="This is a test" speed={1} wordChunk={1} />);
+
+        componentUnderTest.setProps({
+          wordChunk: 1
+        });
+
+        expect(updateSpy).toHaveBeenCalledTimes(1);
+      });
+
+      it('should not call update if the wordChunk prop changes and current not playing', () => {
+        const componentUnderTest = shallow(<SpeedyReader autoPlay={false} inputText="This is a test" speed={1} wordChunk={1} />);
+
+        componentUnderTest.setProps({
+          wordChunk: 2
+        });
+
+        expect(updateSpy).toHaveBeenCalledTimes(0);
+      });
+    });
+  });
+
   describe('componentWillUnmount', () => {
     beforeEach(() => {
       jest.useFakeTimers();
