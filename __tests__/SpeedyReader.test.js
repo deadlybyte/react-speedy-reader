@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import renderer from 'react-test-renderer';
 import { shallow } from 'enzyme';
-import SpeedyReader from '../src/SpeedyReader';
+import SpeedyReader, { MILLISECONDS_IN_MINUTE } from '../src/SpeedyReader';
 
 describe('SpeedyReader', () => {
   describe('render', () => {
@@ -313,15 +313,22 @@ describe('SpeedyReader', () => {
       const componentUnderTest = shallow(<SpeedyReader autoPlay={false} inputText="This is a test" speed={1} />);
       componentUnderTest.setState({ isPlaying: true });
       componentUnderTest.instance().update();
-      jest.runOnlyPendingTimers();
 
-      expect(setTimeout).toHaveBeenCalledTimes(2);
+      expect(setTimeout).toHaveBeenCalledTimes(1);
+      expect(componentUnderTest.state()).toEqual({
+        currentPosition: 0,
+        currentText: '',
+        isPlaying: true,
+        words: ['This', 'is', 'a', 'test']
+      });
+      jest.runOnlyPendingTimers();
       expect(componentUnderTest.state()).toEqual({
         currentPosition: 1,
         currentText: 'This',
         isPlaying: true,
         words: ['This', 'is', 'a', 'test'],
       });
+      expect(setTimeout).toHaveBeenCalledTimes(2);
     });
 
     it('should move to the next word chunk when timeout elapsed', () => {
@@ -331,17 +338,18 @@ describe('SpeedyReader', () => {
 
       const updateSpy = jest.spyOn(SpeedyReader.prototype, 'update');
 
-      jest.runOnlyPendingTimers();
       expect(updateSpy).toBeCalled();
+      expect(setTimeout).toHaveBeenCalledTimes(1);
+      jest.runOnlyPendingTimers();
       expect(setTimeout).toHaveBeenCalledTimes(2);
       jest.runOnlyPendingTimers();
-      expect(setTimeout).toHaveBeenCalledTimes(3);
       expect(componentUnderTest.state()).toEqual({
         currentPosition: 2,
         currentText: 'is',
         isPlaying: true,
         words: ['This', 'is', 'a', 'test'],
       });
+      expect(setTimeout).toHaveBeenCalledTimes(3);
       updateSpy.mockClear();
     });
 
@@ -349,6 +357,14 @@ describe('SpeedyReader', () => {
       const componentUnderTest = shallow(<SpeedyReader autoPlay={false} inputText="This is a test" speed={1} />);
       componentUnderTest.setState({ isPlaying: true });
       componentUnderTest.instance().update();
+      expect(setTimeout).toHaveBeenCalledTimes(1);
+      expect(componentUnderTest.state()).toEqual({
+        currentPosition: 0,
+        currentText: '',
+        isPlaying: true,
+        words: ['This', 'is', 'a', 'test']
+      });
+
       jest.runOnlyPendingTimers();
       expect(setTimeout).toHaveBeenCalledTimes(2);
       expect(componentUnderTest.state()).toEqual({
@@ -357,24 +373,29 @@ describe('SpeedyReader', () => {
         isPlaying: true,
         words: ['This', 'is', 'a', 'test'],
       });
-
       componentUnderTest.setState({ isPlaying: false });
       jest.runOnlyPendingTimers();
-      expect(setTimeout).toHaveBeenCalledTimes(2);
       expect(componentUnderTest.state()).toEqual({
         currentPosition: 2,
         currentText: 'is',
         isPlaying: false,
         words: ['This', 'is', 'a', 'test'],
       });
+      expect(setTimeout).toHaveBeenCalledTimes(2);
     });
 
     it('should pause speed reading and resume correctly', () => {
       const componentUnderTest = shallow(<SpeedyReader autoPlay={false} inputText="This is a test" speed={1} />);
       componentUnderTest.setState({ isPlaying: true });
       componentUnderTest.instance().update();
+      expect(setTimeout).toHaveBeenCalledTimes(1);
+      expect(componentUnderTest.state()).toEqual({
+        currentPosition: 0,
+        currentText: '',
+        isPlaying: true,
+        words: ['This', 'is', 'a', 'test'],
+      });
       jest.runOnlyPendingTimers();
-      expect(setTimeout).toHaveBeenCalledTimes(2);
       expect(componentUnderTest.state()).toEqual({
         currentPosition: 1,
         currentText: 'This',
@@ -396,12 +417,16 @@ describe('SpeedyReader', () => {
       componentUnderTest.instance().update();
       expect(setTimeout).toHaveBeenCalledTimes(3);
       jest.runOnlyPendingTimers();
+      expect(setTimeout).toHaveBeenCalledTimes(4);
       expect(componentUnderTest.state()).toEqual({
         currentPosition: 3,
         currentText: 'a',
         isPlaying: true,
         words: ['This', 'is', 'a', 'test'],
       });
+
+      jest.runOnlyPendingTimers();
+      expect(setTimeout).toHaveBeenCalledTimes(5);
     });
 
     it('should speed read whole passage', () => {
@@ -411,8 +436,16 @@ describe('SpeedyReader', () => {
 
       const updateSpy = jest.spyOn(SpeedyReader.prototype, 'update');
 
-      jest.runOnlyPendingTimers();
       expect(updateSpy).toBeCalled();
+      expect(componentUnderTest.state()).toEqual({
+        currentPosition: 0,
+        currentText: '',
+        isPlaying: true,
+        words: ['This', 'is', 'a', 'test'],
+      });
+      expect(setTimeout).toHaveBeenCalledTimes(1);
+
+      jest.runOnlyPendingTimers();
       expect(componentUnderTest.state()).toEqual({
         currentPosition: 1,
         currentText: 'This',
@@ -420,9 +453,7 @@ describe('SpeedyReader', () => {
         words: ['This', 'is', 'a', 'test'],
       });
       expect(setTimeout).toHaveBeenCalledTimes(2);
-
       jest.runOnlyPendingTimers();
-      expect(setTimeout).toHaveBeenCalledTimes(3);
       expect(componentUnderTest.state()).toEqual({
         currentPosition: 2,
         currentText: 'is',
@@ -430,8 +461,8 @@ describe('SpeedyReader', () => {
         words: ['This', 'is', 'a', 'test'],
       });
 
+      expect(setTimeout).toHaveBeenCalledTimes(3);
       jest.runOnlyPendingTimers();
-      expect(setTimeout).toHaveBeenCalledTimes(4);
       expect(componentUnderTest.state()).toEqual({
         currentPosition: 3,
         currentText: 'a',
@@ -439,12 +470,21 @@ describe('SpeedyReader', () => {
         words: ['This', 'is', 'a', 'test'],
       });
 
-      jest.runOnlyPendingTimers();
       expect(setTimeout).toHaveBeenCalledTimes(4);
+      jest.runOnlyPendingTimers();
       expect(componentUnderTest.state()).toEqual({
         currentPosition: 4,
         currentText: 'test',
         isPlaying: true,
+        words: ['This', 'is', 'a', 'test'],
+      });
+
+      expect(setTimeout).toHaveBeenCalledTimes(5);
+      jest.runOnlyPendingTimers();
+      expect(componentUnderTest.state()).toEqual({
+        currentPosition: 4,
+        currentText: 'test',
+        isPlaying: false,
         words: ['This', 'is', 'a', 'test'],
       });
 
@@ -462,13 +502,41 @@ describe('SpeedyReader', () => {
         onFinishSpy.mockClear();
       });
 
+      it('should reset state when passage is one word and has been read', () => {
+        const componentUnderTest = shallow(<SpeedyReader autoPlay={false} inputText="This" speed={1} />);
+        componentUnderTest.setState({ isPlaying: true });
+        componentUnderTest.instance().update();
+
+        jest.runTimersToTime(2 * MILLISECONDS_IN_MINUTE);
+        expect(componentUnderTest.state()).toEqual({
+          currentPosition: 1,
+          currentText: 'This',
+          isPlaying: false,
+          words: ['This']
+        });
+      });
+
       it('should call onFinish when passage is one word and has been read', () => {
         const componentUnderTest = shallow(<SpeedyReader autoPlay={false} inputText="This" speed={1} onFinish={onFinishSpy} />);
         componentUnderTest.setState({ isPlaying: true });
         componentUnderTest.instance().update();
 
-        jest.runOnlyPendingTimers();
+        jest.runTimersToTime(2 * MILLISECONDS_IN_MINUTE);
         expect(onFinishSpy).toHaveBeenCalled();
+      });
+
+      it('should reset state when passage is multiple words and whole passage has been read', () => {
+        const componentUnderTest = shallow(<SpeedyReader autoPlay={false} inputText="This is a test" speed={1} onFinish={onFinishSpy} />);
+        componentUnderTest.setState({ isPlaying: true });
+        componentUnderTest.instance().update();
+
+        jest.runTimersToTime(5 * MILLISECONDS_IN_MINUTE);
+        expect(componentUnderTest.state()).toEqual({
+          currentPosition: 4,
+          currentText: 'test',
+          isPlaying: false,
+          words: ['This', 'is', 'a', 'test']
+        });
       });
 
       it('should call onFinish when passage is multiple words and whole passage has been read', () => {
@@ -476,10 +544,7 @@ describe('SpeedyReader', () => {
         componentUnderTest.setState({ isPlaying: true });
         componentUnderTest.instance().update();
 
-        jest.runOnlyPendingTimers();
-        jest.runOnlyPendingTimers();
-        jest.runOnlyPendingTimers();
-        jest.runOnlyPendingTimers();
+        jest.runTimersToTime(5 * MILLISECONDS_IN_MINUTE);
         expect(onFinishSpy).toHaveBeenCalled();
       });
     });

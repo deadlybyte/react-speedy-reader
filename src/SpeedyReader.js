@@ -195,8 +195,16 @@ class SpeedyReader extends Component {
 
       if (currentStartPosition < numberOfWords) {
         this.update();
-      } else if (onFinish) {
-        onFinish();
+      } else {
+        this.timer = setTimeout(() => {
+          this.setState({
+            isPlaying: false
+          });
+
+          if (onFinish) {
+            onFinish();
+          }
+        }, timeout);
       }
     }, timeout);
   }
