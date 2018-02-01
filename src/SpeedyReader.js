@@ -198,7 +198,7 @@ class SpeedyReader extends Component {
       } else {
         this.timer = setTimeout(() => {
           this.setState({
-            isPlaying: false
+            isPlaying: false,
           });
 
           if (onFinish) {
