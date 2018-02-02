@@ -6,7 +6,7 @@ Speed reader component for React, which streams the text in chunks. Enabling the
 
 ### Prerequisites
 
-* [Node.js v4.0+](https://nodejs.org)
+* [Node.js v7.6+](https://nodejs.org)
 
 ### Installing
 
@@ -83,7 +83,7 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduc
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/deadlybyte/react-speedy-reader/tags). 
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/deadlybyte/react-speedy-reader/tags).
 
 ## Authors
 

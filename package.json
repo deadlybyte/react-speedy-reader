@@ -68,6 +68,9 @@
   "dependencies": {
     "prop-types": "^15.6.0"
   },
+  "engines": {
+    "node": ">=7.6"
+  },
   "jest": {
     "collectCoverage": true,
     "collectCoverageFrom": [
