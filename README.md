@@ -2,6 +2,8 @@
 
 Speed reader component for React, which streams the text in chunks. Enabling the user to read long passages of text with ease.
 
+[![Build Status](https://travis-ci.org/deadlybyte/react-speedy-reader.svg?branch=master)](https://travis-ci.org/deadlybyte/react-speedy-reader)
+
 ## Getting Started
 
 ### Prerequisites
