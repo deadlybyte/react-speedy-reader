@@ -7,4 +7,5 @@ install:
  - npm install -g codecov
 cache: yarn
 script:
+  - npm test
   - codecov
