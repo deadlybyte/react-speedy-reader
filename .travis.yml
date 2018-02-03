@@ -4,8 +4,11 @@ node_js:
   - "8"
   - "7"
 install:
- - npm install -g codecov
-cache: yarn
+  - npm install
+  - npm install -g codecov
+cache:
+  directories:
+    - "node_modules"
 script:
   - npm test
   - codecov
