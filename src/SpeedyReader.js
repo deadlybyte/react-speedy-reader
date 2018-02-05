@@ -126,8 +126,7 @@ class SpeedyReader extends Component {
   pause() {
     this.setState({
       isPlaying: false,
-    });
-    this.update();
+    }, () => this.update());
   }
 
   /**
@@ -137,8 +136,7 @@ class SpeedyReader extends Component {
   play() {
     this.setState({
       isPlaying: true,
-    });
-    this.update();
+    }, () => this.update());
   }
 
   /**
@@ -149,8 +147,7 @@ class SpeedyReader extends Component {
     this.setState({
       ...this.getInitialState(),
       isPlaying: true,
-    });
-    this.update();
+    }, () => this.update());
   }
 
   /**
@@ -189,23 +186,23 @@ class SpeedyReader extends Component {
       this.setState({
         currentPosition,
         currentText,
+      }, () => {
+        currentStartPosition += wordChunk;
+
+        if (currentStartPosition < numberOfWords) {
+          this.update();
+        } else {
+          this.timer = setTimeout(() => {
+            this.setState({
+              isPlaying: false,
+            }, () => {
+              if (onFinish) {
+                onFinish();
+              }
+            });
+          }, timeout);
+        }
       });
-
-      currentStartPosition += wordChunk;
-
-      if (currentStartPosition < numberOfWords) {
-        this.update();
-      } else {
-        this.timer = setTimeout(() => {
-          this.setState({
-            isPlaying: false,
-          });
-
-          if (onFinish) {
-            onFinish();
-          }
-        }, timeout);
-      }
     }, timeout);
   }
 
