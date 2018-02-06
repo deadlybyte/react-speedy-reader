@@ -68,7 +68,7 @@ Pauses playing of the words for the speed reading.
 
 Resumes playing of the words for the speed reading.
 
-### reset()
+### reset(autoPlay?)
 
 Resets the speedy reader to the initial state.
 

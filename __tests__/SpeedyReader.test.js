@@ -263,6 +263,34 @@ describe('SpeedyReader', () => {
       });
       expect(updateSpy).toBeCalled();
     });
+
+    it('should reset the reader and restore back to initial state and auto play', () => {
+      const componentUnderTest = shallow(<SpeedyReader autoPlay={false} isPlaying inputText="This is a test" speed={1} />);
+
+      componentUnderTest.instance().reset(true);
+      expect(getInitialStateSpy).toHaveBeenCalled();
+      expect(componentUnderTest.state()).toEqual({
+        currentPosition: 0,
+        currentText: '',
+        isPlaying: true,
+        words: ['This', 'is', 'a', 'test'],
+      });
+      expect(updateSpy).toBeCalled();
+    });
+
+    it('should reset the reader and restore back to initial state and not auto play', () => {
+      const componentUnderTest = shallow(<SpeedyReader autoPlay={false} isPlaying inputText="This is a test" speed={1} />);
+
+      componentUnderTest.instance().reset(false);
+      expect(getInitialStateSpy).toHaveBeenCalled();
+      expect(componentUnderTest.state()).toEqual({
+        currentPosition: 0,
+        currentText: '',
+        isPlaying: false,
+        words: ['This', 'is', 'a', 'test'],
+      });
+      expect(updateSpy).toBeCalled();
+    });
   });
 
   describe('update', () => {

@@ -141,12 +141,13 @@ class SpeedyReader extends Component {
 
   /**
    * Resets the speedy reader to the initial state
+   * @param {boolean} [autoPlay=true] - Indicates whether speedy reader should auto play once reset
    * @returns {void}
    */
-  reset() {
+  reset(autoPlay = true) {
     this.setState({
       ...this.getInitialState(),
-      isPlaying: true,
+      isPlaying: autoPlay,
     }, () => this.update());
   }
 
