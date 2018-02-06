@@ -33,7 +33,7 @@
   "devDependencies": {
     "@types/enzyme": "^3.1.8",
     "@types/expect": "^1.20.2",
-    "@types/jest": "^22.1.0",
+    "@types/jest": "^22.1.1",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.1",
     "babel-jest": "^21.2.0",
