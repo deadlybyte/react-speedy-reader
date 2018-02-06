@@ -1,6 +1,6 @@
 {
   "name": "react-speedy-reader",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Speed reader component for React, which streams the text in chunks. Enabling the user to read long passages of text with ease.",
   "author": "Carl Saunders <carl.saunders@deadlybyte.co.uk> (http://www.deadlybyte.co.uk)",
   "license": "MIT",
