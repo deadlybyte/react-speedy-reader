@@ -95,7 +95,7 @@ describe('SpeedyReader', () => {
         const componentUnderTest = shallow(<SpeedyReader autoPlay inputText="This is a test" speed={1} />);
 
         componentUnderTest.setProps({
-          speed: 2
+          speed: 2,
         });
 
         expect(updateSpy).toHaveBeenCalledTimes(2);
@@ -105,7 +105,7 @@ describe('SpeedyReader', () => {
         const componentUnderTest = shallow(<SpeedyReader autoPlay inputText="This is a test" speed={1} />);
 
         componentUnderTest.setProps({
-          speed: 1
+          speed: 1,
         });
 
         expect(updateSpy).toHaveBeenCalledTimes(1);
@@ -115,7 +115,7 @@ describe('SpeedyReader', () => {
         const componentUnderTest = shallow(<SpeedyReader autoPlay={false} inputText="This is a test" speed={1} />);
 
         componentUnderTest.setProps({
-          speed: 2
+          speed: 2,
         });
 
         expect(updateSpy).toHaveBeenCalledTimes(0);
@@ -127,7 +127,7 @@ describe('SpeedyReader', () => {
         const componentUnderTest = shallow(<SpeedyReader autoPlay inputText="This is a test" speed={1} wordChunk={1} />);
 
         componentUnderTest.setProps({
-          wordChunk: 2
+          wordChunk: 2,
         });
 
         expect(updateSpy).toHaveBeenCalledTimes(2);
@@ -137,7 +137,7 @@ describe('SpeedyReader', () => {
         const componentUnderTest = shallow(<SpeedyReader autoPlay inputText="This is a test" speed={1} wordChunk={1} />);
 
         componentUnderTest.setProps({
-          wordChunk: 1
+          wordChunk: 1,
         });
 
         expect(updateSpy).toHaveBeenCalledTimes(1);
@@ -147,7 +147,7 @@ describe('SpeedyReader', () => {
         const componentUnderTest = shallow(<SpeedyReader autoPlay={false} inputText="This is a test" speed={1} wordChunk={1} />);
 
         componentUnderTest.setProps({
-          wordChunk: 2
+          wordChunk: 2,
         });
 
         expect(updateSpy).toHaveBeenCalledTimes(0);
@@ -347,7 +347,7 @@ describe('SpeedyReader', () => {
         currentPosition: 0,
         currentText: '',
         isPlaying: true,
-        words: ['This', 'is', 'a', 'test']
+        words: ['This', 'is', 'a', 'test'],
       });
       jest.runOnlyPendingTimers();
       expect(componentUnderTest.state()).toEqual({
@@ -390,7 +390,7 @@ describe('SpeedyReader', () => {
         currentPosition: 0,
         currentText: '',
         isPlaying: true,
-        words: ['This', 'is', 'a', 'test']
+        words: ['This', 'is', 'a', 'test'],
       });
 
       jest.runOnlyPendingTimers();
@@ -540,7 +540,7 @@ describe('SpeedyReader', () => {
           currentPosition: 1,
           currentText: 'This',
           isPlaying: false,
-          words: ['This']
+          words: ['This'],
         });
       });
 
@@ -563,7 +563,7 @@ describe('SpeedyReader', () => {
           currentPosition: 4,
           currentText: 'test',
           isPlaying: false,
-          words: ['This', 'is', 'a', 'test']
+          words: ['This', 'is', 'a', 'test'],
         });
       });
 
