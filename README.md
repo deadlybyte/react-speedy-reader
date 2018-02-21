@@ -4,6 +4,7 @@ Speed reader component for React, which streams the text in chunks. Enabling the
 
 [![Build Status](https://travis-ci.org/deadlybyte/react-speedy-reader.svg?branch=master)](https://travis-ci.org/deadlybyte/react-speedy-reader)
 [![codecov](https://codecov.io/gh/deadlybyte/react-speedy-reader/branch/master/graph/badge.svg)](https://codecov.io/gh/deadlybyte/react-speedy-reader)
+[![npm version](https://badge.fury.io/js/react-speedy-reader.svg)](https://badge.fury.io/js/react-speedy-reader)
 
 ## Getting Started
 
