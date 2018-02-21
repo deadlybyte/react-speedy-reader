@@ -45,7 +45,7 @@
     "enzyme-adapter-react-16": "^1.0.4",
     "enzyme-to-json": "^3.3.1",
     "enzyme-wait": "^1.0.9",
-    "eslint": "^4.18.0",
+    "eslint": "^4.18.1",
     "eslint-config-airbnb": "16.1.0",
     "eslint-config-airbnb-base": "12.1.0",
     "eslint-loader": "^1.9.0",
