@@ -16,11 +16,11 @@
 
 ## Documentation
 
-- `npm jsdoc` will build the documentation for the component in `jsdoc/`.
+- `npm run jsdoc` will build the documentation for the component in `jsdoc/`.
 
 ## Linting
 
-- `npm eslint` will run linting against the `src` and `test` folders.
+- `npm run eslint` will run linting against the `src` and `test` folders.
 
 ## Building
 
@@ -28,6 +28,13 @@
 
 - `npm run demo` will build the component for publishing to npm and also build the demo app in `demo/`.
 
-#Pre-publish
+## Pre-publish
 
 - `npm run prepublishOnly` will build the component for publishing to npm along with the documention for the component in `jsdoc/`.
+
+## Publish
+
+- `npm version patch`
+- `git push --tags`
+
+`npm publish` is handled by travis-ci when a tag is created.

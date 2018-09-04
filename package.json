@@ -18,8 +18,8 @@
     "url": "git@github.com:deadlybyte/react-speedy-reader.git"
   },
   "scripts": {
-    "demo": "webpack && cd demo/default && webpack",
-    "build": "webpack",
+    "demo": "webpack --mode=development && cd demo/default && webpack --mode=development",
+    "build": "webpack --mode=production",
     "eslint": "eslint --ext .js src __test__",
     "test": "jest",
     "prepublishOnly": "npm run build && npm run jsdoc",
@@ -63,6 +63,7 @@
     "react-hot-loader": "^4.0.0",
     "react-test-renderer": "^16.4.2",
     "webpack": "^4.17.2",
+    "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.0"
   },
   "dependencies": {
