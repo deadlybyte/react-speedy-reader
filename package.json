@@ -20,7 +20,7 @@
   "scripts": {
     "demo": "webpack --mode=development && cd demo/default && webpack --mode=development",
     "build": "webpack --mode=production",
-    "eslint": "eslint --ext .js src __test__",
+    "eslint": "eslint --ext .js src __tests__",
     "test": "jest",
     "prepublishOnly": "npm run build && npm run jsdoc",
     "jsdoc": "jsdoc -c ./jsdoc.config.json -d ./jsdoc",

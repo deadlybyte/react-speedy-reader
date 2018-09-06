@@ -91,8 +91,8 @@ class SpeedyReader extends Component {
   componentWillReceiveProps(nextProps) {
     const { speed, wordChunk } = this.props;
     const { isPlaying } = this.state;
-    const needsUpdating = isPlaying &&
-      (nextProps.speed !== speed || nextProps.wordChunk !== wordChunk);
+    const needsUpdating = isPlaying
+      && (nextProps.speed !== speed || nextProps.wordChunk !== wordChunk);
 
     if (needsUpdating) {
       this.update();
@@ -177,8 +177,8 @@ class SpeedyReader extends Component {
       currentPosition += wordChunk;
 
       // recalculate start position and words to be read
-      let currentStartPosition = wordChunk >= (numberOfWords - 1) ?
-        0 : (currentPosition - wordChunk);
+      let currentStartPosition = wordChunk >= (numberOfWords - 1)
+        ? 0 : (currentPosition - wordChunk);
 
       const currentTextWords = words.slice(currentStartPosition, currentPosition);
 
