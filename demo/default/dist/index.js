@@ -93,131 +93,272 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-/* WEBPACK VAR INJECTION */(function(module) {var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
-
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
 (function webpackUniversalModuleDefinition(root, factory) {
-  if (( false ? undefined : _typeof(exports)) === 'object' && ( false ? undefined : _typeof(module)) === 'object') module.exports = factory(__webpack_require__(/*! react */ "../../node_modules/react/index.js"));else if (true) !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(/*! react */ "../../node_modules/react/index.js")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
-				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
-				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));else {}
+  if (true) module.exports = factory(__webpack_require__(/*! react */ "../../node_modules/react/index.js"));else {}
 })(window, function (__WEBPACK_EXTERNAL_MODULE_react__) {
-  return (/******/function (modules) {
+  return (
+    /******/
+    function (modules) {
       // webpackBootstrap
-      /******/ // The module cache
-      /******/var installedModules = {};
+
       /******/
-      /******/ // The require function
-      /******/function __webpack_require__(moduleId) {
+      // The module cache
+
+      /******/
+      var installedModules = {};
+      /******/
+
+      /******/
+      // The require function
+
+      /******/
+
+      function __webpack_require__(moduleId) {
         /******/
-        /******/ // Check if module is in cache
-        /******/if (installedModules[moduleId]) {
-          /******/return installedModules[moduleId].exports;
+
+        /******/
+        // Check if module is in cache
+
+        /******/
+        if (installedModules[moduleId]) {
+          /******/
+          return installedModules[moduleId].exports;
           /******/
         }
-        /******/ // Create a new module (and put it into the cache)
-        /******/var module = installedModules[moduleId] = {
-          /******/i: moduleId,
-          /******/l: false,
-          /******/exports: {}
-          /******/ };
         /******/
-        /******/ // Execute the module function
-        /******/modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+        // Create a new module (and put it into the cache)
+
         /******/
-        /******/ // Flag the module as loaded
-        /******/module.l = true;
+
+
+        var module = installedModules[moduleId] = {
+          /******/
+          i: moduleId,
+
+          /******/
+          l: false,
+
+          /******/
+          exports: {}
+          /******/
+
+        };
         /******/
-        /******/ // Return the exports of the module
-        /******/return module.exports;
+
+        /******/
+        // Execute the module function
+
+        /******/
+
+        modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+        /******/
+
+        /******/
+        // Flag the module as loaded
+
+        /******/
+
+        module.l = true;
+        /******/
+
+        /******/
+        // Return the exports of the module
+
+        /******/
+
+        return module.exports;
         /******/
       }
       /******/
+
       /******/
-      /******/ // expose the modules object (__webpack_modules__)
-      /******/__webpack_require__.m = modules;
+
       /******/
-      /******/ // expose the module cache
-      /******/__webpack_require__.c = installedModules;
+      // expose the modules object (__webpack_modules__)
+
       /******/
-      /******/ // define getter function for harmony exports
-      /******/__webpack_require__.d = function (exports, name, getter) {
-        /******/if (!__webpack_require__.o(exports, name)) {
-          /******/Object.defineProperty(exports, name, { enumerable: true, get: getter });
+
+
+      __webpack_require__.m = modules;
+      /******/
+
+      /******/
+      // expose the module cache
+
+      /******/
+
+      __webpack_require__.c = installedModules;
+      /******/
+
+      /******/
+      // define getter function for harmony exports
+
+      /******/
+
+      __webpack_require__.d = function (exports, name, getter) {
+        /******/
+        if (!__webpack_require__.o(exports, name)) {
+          /******/
+          Object.defineProperty(exports, name, {
+            enumerable: true,
+            get: getter
+          });
           /******/
         }
         /******/
+
       };
       /******/
-      /******/ // define __esModule on exports
-      /******/__webpack_require__.r = function (exports) {
-        /******/if (typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-          /******/Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+
+      /******/
+      // define __esModule on exports
+
+      /******/
+
+
+      __webpack_require__.r = function (exports) {
+        /******/
+        if (typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+          /******/
+          Object.defineProperty(exports, Symbol.toStringTag, {
+            value: 'Module'
+          });
           /******/
         }
-        /******/Object.defineProperty(exports, '__esModule', { value: true });
+        /******/
+
+
+        Object.defineProperty(exports, '__esModule', {
+          value: true
+        });
         /******/
       };
       /******/
-      /******/ // create a fake namespace object
-      /******/ // mode & 1: value is a module id, require it
-      /******/ // mode & 2: merge all properties of value into the ns
-      /******/ // mode & 4: return value when already ns object
-      /******/ // mode & 8|1: behave like require
-      /******/__webpack_require__.t = function (value, mode) {
-        /******/if (mode & 1) value = __webpack_require__(value);
-        /******/if (mode & 8) return value;
-        /******/if (mode & 4 && (typeof value === 'undefined' ? 'undefined' : _typeof(value)) === 'object' && value && value.__esModule) return value;
-        /******/var ns = Object.create(null);
-        /******/__webpack_require__.r(ns);
-        /******/Object.defineProperty(ns, 'default', { enumerable: true, value: value });
-        /******/if (mode & 2 && typeof value != 'string') for (var key in value) {
-          __webpack_require__.d(ns, key, function (key) {
-            return value[key];
-          }.bind(null, key));
-        } /******/return ns;
+
+      /******/
+      // create a fake namespace object
+
+      /******/
+      // mode & 1: value is a module id, require it
+
+      /******/
+      // mode & 2: merge all properties of value into the ns
+
+      /******/
+      // mode & 4: return value when already ns object
+
+      /******/
+      // mode & 8|1: behave like require
+
+      /******/
+
+
+      __webpack_require__.t = function (value, mode) {
+        /******/
+        if (mode & 1) value = __webpack_require__(value);
+        /******/
+
+        if (mode & 8) return value;
+        /******/
+
+        if (mode & 4 && typeof value === 'object' && value && value.__esModule) return value;
+        /******/
+
+        var ns = Object.create(null);
+        /******/
+
+        __webpack_require__.r(ns);
+        /******/
+
+
+        Object.defineProperty(ns, 'default', {
+          enumerable: true,
+          value: value
+        });
+        /******/
+
+        if (mode & 2 && typeof value != 'string') for (var key in value) __webpack_require__.d(ns, key, function (key) {
+          return value[key];
+        }.bind(null, key));
+        /******/
+
+        return ns;
         /******/
       };
       /******/
-      /******/ // getDefaultExport function for compatibility with non-harmony modules
-      /******/__webpack_require__.n = function (module) {
-        /******/var getter = module && module.__esModule ?
-        /******/function getDefault() {
+
+      /******/
+      // getDefaultExport function for compatibility with non-harmony modules
+
+      /******/
+
+
+      __webpack_require__.n = function (module) {
+        /******/
+        var getter = module && module.__esModule ?
+        /******/
+        function getDefault() {
           return module['default'];
         } :
-        /******/function getModuleExports() {
+        /******/
+        function getModuleExports() {
           return module;
         };
-        /******/__webpack_require__.d(getter, 'a', getter);
-        /******/return getter;
+        /******/
+
+        __webpack_require__.d(getter, 'a', getter);
+        /******/
+
+
+        return getter;
         /******/
       };
       /******/
-      /******/ // Object.prototype.hasOwnProperty.call
-      /******/__webpack_require__.o = function (object, property) {
+
+      /******/
+      // Object.prototype.hasOwnProperty.call
+
+      /******/
+
+
+      __webpack_require__.o = function (object, property) {
         return Object.prototype.hasOwnProperty.call(object, property);
       };
       /******/
-      /******/ // __webpack_public_path__
-      /******/__webpack_require__.p = "/";
+
       /******/
+      // __webpack_public_path__
+
       /******/
-      /******/ // Load entry module and return exports
-      /******/return __webpack_require__(__webpack_require__.s = 0);
+
+
+      __webpack_require__.p = "/";
+      /******/
+
+      /******/
+
+      /******/
+      // Load entry module and return exports
+
+      /******/
+
+      return __webpack_require__(__webpack_require__.s = 0);
       /******/
     }(
     /************************************************************************/
-    /******/{
 
-      /***/"./node_modules/object-assign/index.js":
+    /******/
+    {
+      /***/
+      "./node_modules/object-assign/index.js":
       /*!*********************************************!*\
         !*** ./node_modules/object-assign/index.js ***!
         \*********************************************/
-      /*! no static exports found */
-      /***/function node_modulesObjectAssignIndexJs(module, exports, __webpack_require__) {
 
+      /*! no static exports found */
+
+      /***/
+      function (module, exports, __webpack_require__) {
         "use strict";
         /*
         object-assign
@@ -243,34 +384,39 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
           try {
             if (!Object.assign) {
               return false;
-            }
-
-            // Detect buggy property enumeration order in older V8 versions.
-
+            } // Detect buggy property enumeration order in older V8 versions.
             // https://bugs.chromium.org/p/v8/issues/detail?id=4118
+
+
             var test1 = new String('abc'); // eslint-disable-line no-new-wrappers
+
             test1[5] = 'de';
+
             if (Object.getOwnPropertyNames(test1)[0] === '5') {
               return false;
-            }
+            } // https://bugs.chromium.org/p/v8/issues/detail?id=3056
 
-            // https://bugs.chromium.org/p/v8/issues/detail?id=3056
+
             var test2 = {};
+
             for (var i = 0; i < 10; i++) {
               test2['_' + String.fromCharCode(i)] = i;
             }
+
             var order2 = Object.getOwnPropertyNames(test2).map(function (n) {
               return test2[n];
             });
+
             if (order2.join('') !== '0123456789') {
               return false;
-            }
+            } // https://bugs.chromium.org/p/v8/issues/detail?id=3056
 
-            // https://bugs.chromium.org/p/v8/issues/detail?id=3056
+
             var test3 = {};
             'abcdefghijklmnopqrst'.split('').forEach(function (letter) {
               test3[letter] = letter;
             });
+
             if (Object.keys(Object.assign({}, test3)).join('') !== 'abcdefghijklmnopqrst') {
               return false;
             }
@@ -298,6 +444,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
             if (getOwnPropertySymbols) {
               symbols = getOwnPropertySymbols(from);
+
               for (var i = 0; i < symbols.length; i++) {
                 if (propIsEnumerable.call(from, symbols[i])) {
                   to[symbols[i]] = from[symbols[i]];
@@ -308,17 +455,19 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
           return to;
         };
-
         /***/
       },
 
-      /***/"./node_modules/prop-types/checkPropTypes.js":
+      /***/
+      "./node_modules/prop-types/checkPropTypes.js":
       /*!***************************************************!*\
         !*** ./node_modules/prop-types/checkPropTypes.js ***!
         \***************************************************/
-      /*! no static exports found */
-      /***/function node_modulesPropTypesCheckPropTypesJs(module, exports, __webpack_require__) {
 
+      /*! no static exports found */
+
+      /***/
+      function (module, exports, __webpack_require__) {
         "use strict";
         /**
          * Copyright (c) 2013-present, Facebook, Inc.
@@ -327,17 +476,22 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
          * LICENSE file in the root directory of this source tree.
          */
 
-        var printWarning = function printWarning() {};
+        var printWarning = function () {};
 
         if (true) {
-          var ReactPropTypesSecret = __webpack_require__( /*! ./lib/ReactPropTypesSecret */"./node_modules/prop-types/lib/ReactPropTypesSecret.js");
+          var ReactPropTypesSecret = __webpack_require__(
+          /*! ./lib/ReactPropTypesSecret */
+          "./node_modules/prop-types/lib/ReactPropTypesSecret.js");
+
           var loggedTypeFailures = {};
 
-          printWarning = function printWarning(text) {
+          printWarning = function (text) {
             var message = 'Warning: ' + text;
+
             if (typeof console !== 'undefined') {
               console.error(message);
             }
+
             try {
               // --- Welcome to debugging React ---
               // This error was thrown as a convenience so that you can use this stack
@@ -346,7 +500,6 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
             } catch (x) {}
           };
         }
-
         /**
          * Assert that the values match with the type specs.
          * Error messages are memorized and will only be shown once.
@@ -358,36 +511,39 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
          * @param {?Function} getStack Returns the component stack.
          * @private
          */
+
+
         function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
           if (true) {
             for (var typeSpecName in typeSpecs) {
               if (typeSpecs.hasOwnProperty(typeSpecName)) {
-                var error;
-                // Prop type validation may throw. In case they do, we don't want to
+                var error; // Prop type validation may throw. In case they do, we don't want to
                 // fail the render phase where it didn't fail before. So we log it.
                 // After these have been cleaned up, we'll let them throw.
+
                 try {
                   // This is intentionally an invariant that gets caught. It's the same
                   // behavior as without this statement except with a better message.
                   if (typeof typeSpecs[typeSpecName] !== 'function') {
-                    var err = Error((componentName || 'React class') + ': ' + location + ' type `' + typeSpecName + '` is invalid; ' + 'it must be a function, usually from the `prop-types` package, but received `' + _typeof(typeSpecs[typeSpecName]) + '`.');
+                    var err = Error((componentName || 'React class') + ': ' + location + ' type `' + typeSpecName + '` is invalid; ' + 'it must be a function, usually from the `prop-types` package, but received `' + typeof typeSpecs[typeSpecName] + '`.');
                     err.name = 'Invariant Violation';
                     throw err;
                   }
+
                   error = typeSpecs[typeSpecName](values, typeSpecName, componentName, location, null, ReactPropTypesSecret);
                 } catch (ex) {
                   error = ex;
                 }
+
                 if (error && !(error instanceof Error)) {
-                  printWarning((componentName || 'React class') + ': type specification of ' + location + ' `' + typeSpecName + '` is invalid; the type checker ' + 'function must return `null` or an `Error` but returned a ' + (typeof error === 'undefined' ? 'undefined' : _typeof(error)) + '. ' + 'You may have forgotten to pass an argument to the type checker ' + 'creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and ' + 'shape all require an argument).');
+                  printWarning((componentName || 'React class') + ': type specification of ' + location + ' `' + typeSpecName + '` is invalid; the type checker ' + 'function must return `null` or an `Error` but returned a ' + typeof error + '. ' + 'You may have forgotten to pass an argument to the type checker ' + 'creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and ' + 'shape all require an argument).');
                 }
+
                 if (error instanceof Error && !(error.message in loggedTypeFailures)) {
                   // Only monitor this failure once because there tends to be a lot of the
                   // same error.
                   loggedTypeFailures[error.message] = true;
-
                   var stack = getStack ? getStack() : '';
-
                   printWarning('Failed ' + location + ' type: ' + error.message + (stack != null ? stack : ''));
                 }
               }
@@ -396,17 +552,19 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
         }
 
         module.exports = checkPropTypes;
-
         /***/
       },
 
-      /***/"./node_modules/prop-types/factoryWithTypeCheckers.js":
+      /***/
+      "./node_modules/prop-types/factoryWithTypeCheckers.js":
       /*!************************************************************!*\
         !*** ./node_modules/prop-types/factoryWithTypeCheckers.js ***!
         \************************************************************/
-      /*! no static exports found */
-      /***/function node_modulesPropTypesFactoryWithTypeCheckersJs(module, exports, __webpack_require__) {
 
+      /*! no static exports found */
+
+      /***/
+      function (module, exports, __webpack_require__) {
         "use strict";
         /**
          * Copyright (c) 2013-present, Facebook, Inc.
@@ -415,19 +573,28 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
          * LICENSE file in the root directory of this source tree.
          */
 
-        var assign = __webpack_require__( /*! object-assign */"./node_modules/object-assign/index.js");
+        var assign = __webpack_require__(
+        /*! object-assign */
+        "./node_modules/object-assign/index.js");
 
-        var ReactPropTypesSecret = __webpack_require__( /*! ./lib/ReactPropTypesSecret */"./node_modules/prop-types/lib/ReactPropTypesSecret.js");
-        var checkPropTypes = __webpack_require__( /*! ./checkPropTypes */"./node_modules/prop-types/checkPropTypes.js");
+        var ReactPropTypesSecret = __webpack_require__(
+        /*! ./lib/ReactPropTypesSecret */
+        "./node_modules/prop-types/lib/ReactPropTypesSecret.js");
 
-        var printWarning = function printWarning() {};
+        var checkPropTypes = __webpack_require__(
+        /*! ./checkPropTypes */
+        "./node_modules/prop-types/checkPropTypes.js");
+
+        var printWarning = function () {};
 
         if (true) {
-          printWarning = function printWarning(text) {
+          printWarning = function (text) {
             var message = 'Warning: ' + text;
+
             if (typeof console !== 'undefined') {
               console.error(message);
             }
+
             try {
               // --- Welcome to debugging React ---
               // This error was thrown as a convenience so that you can use this stack
@@ -460,13 +627,14 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
            * @param {?object} maybeIterable
            * @return {?function}
            */
+
           function getIteratorFn(maybeIterable) {
             var iteratorFn = maybeIterable && (ITERATOR_SYMBOL && maybeIterable[ITERATOR_SYMBOL] || maybeIterable[FAUX_ITERATOR_SYMBOL]);
+
             if (typeof iteratorFn === 'function') {
               return iteratorFn;
             }
           }
-
           /**
            * Collection of methods that allow declaration and validation of props that are
            * supplied to React components. Example usage:
@@ -514,10 +682,10 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
            * @internal
            */
 
-          var ANONYMOUS = '<<anonymous>>';
 
-          // Important!
+          var ANONYMOUS = '<<anonymous>>'; // Important!
           // Keep this list in sync with production version in `./factoryWithThrowingShims.js`.
+
           var ReactPropTypes = {
             array: createPrimitiveTypeChecker('array'),
             bool: createPrimitiveTypeChecker('boolean'),
@@ -526,7 +694,6 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
             object: createPrimitiveTypeChecker('object'),
             string: createPrimitiveTypeChecker('string'),
             symbol: createPrimitiveTypeChecker('symbol'),
-
             any: createAnyTypeChecker(),
             arrayOf: createArrayOfTypeChecker,
             element: createElementTypeChecker(),
@@ -538,12 +705,13 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
             shape: createShapeTypeChecker,
             exact: createStrictShapeTypeChecker
           };
-
           /**
            * inlined Object.is polyfill to avoid requiring consumers ship their own
            * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is
            */
+
           /*eslint-disable no-self-compare*/
+
           function is(x, y) {
             // SameValue algorithm
             if (x === y) {
@@ -564,11 +732,14 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
            * is prohibitively expensive if they are created too often, such as what
            * happens in oneOfType() for any type before the one that matched.
            */
+
+
           function PropTypeError(message) {
             this.message = message;
             this.stack = '';
-          }
-          // Make `instanceof Error` still work for returned errors.
+          } // Make `instanceof Error` still work for returned errors.
+
+
           PropTypeError.prototype = Error.prototype;
 
           function createChainableTypeChecker(validate) {
@@ -576,6 +747,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
               var manualPropTypeCallCache = {};
               var manualPropTypeWarningCount = 0;
             }
+
             function checkType(isRequired, props, propName, componentName, location, propFullName, secret) {
               componentName = componentName || ANONYMOUS;
               propFullName = propFullName || propName;
@@ -589,8 +761,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
                 } else if ("development" !== 'production' && typeof console !== 'undefined') {
                   // Old behavior for people using React.PropTypes
                   var cacheKey = componentName + ':' + propName;
-                  if (!manualPropTypeCallCache[cacheKey] &&
-                  // Avoid spamming the console because they are often not actionable except for lib authors
+
+                  if (!manualPropTypeCallCache[cacheKey] && // Avoid spamming the console because they are often not actionable except for lib authors
                   manualPropTypeWarningCount < 3) {
                     printWarning('You are manually calling a React.PropTypes validation ' + 'function for the `' + propFullName + '` prop on `' + componentName + '`. This is deprecated ' + 'and will throw in the standalone `prop-types` package. ' + 'You may be seeing this warning due to a third-party PropTypes ' + 'library. See https://fb.me/react-warning-dont-call-proptypes ' + 'for details.');
                     manualPropTypeCallCache[cacheKey] = true;
@@ -598,13 +770,16 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
                   }
                 }
               }
+
               if (props[propName] == null) {
                 if (isRequired) {
                   if (props[propName] === null) {
                     return new PropTypeError('The ' + location + ' `' + propFullName + '` is marked as required ' + ('in `' + componentName + '`, but its value is `null`.'));
                   }
+
                   return new PropTypeError('The ' + location + ' `' + propFullName + '` is marked as required in ' + ('`' + componentName + '`, but its value is `undefined`.'));
                 }
+
                 return null;
               } else {
                 return validate(props, propName, componentName, location, propFullName);
@@ -613,7 +788,6 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
             var chainedCheckType = checkType.bind(null, false);
             chainedCheckType.isRequired = checkType.bind(null, true);
-
             return chainedCheckType;
           }
 
@@ -621,16 +795,18 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
             function validate(props, propName, componentName, location, propFullName, secret) {
               var propValue = props[propName];
               var propType = getPropType(propValue);
+
               if (propType !== expectedType) {
                 // `propValue` being instance of, say, date/regexp, pass the 'object'
                 // check, but we can offer a more precise error message here rather than
                 // 'of type `object`'.
                 var preciseType = getPreciseType(propValue);
-
                 return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + preciseType + '` supplied to `' + componentName + '`, expected ') + ('`' + expectedType + '`.'));
               }
+
               return null;
             }
+
             return createChainableTypeChecker(validate);
           }
 
@@ -643,31 +819,40 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
               if (typeof typeChecker !== 'function') {
                 return new PropTypeError('Property `' + propFullName + '` of component `' + componentName + '` has invalid PropType notation inside arrayOf.');
               }
+
               var propValue = props[propName];
+
               if (!Array.isArray(propValue)) {
                 var propType = getPropType(propValue);
                 return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + propType + '` supplied to `' + componentName + '`, expected an array.'));
               }
+
               for (var i = 0; i < propValue.length; i++) {
                 var error = typeChecker(propValue, i, componentName, location, propFullName + '[' + i + ']', ReactPropTypesSecret);
+
                 if (error instanceof Error) {
                   return error;
                 }
               }
+
               return null;
             }
+
             return createChainableTypeChecker(validate);
           }
 
           function createElementTypeChecker() {
             function validate(props, propName, componentName, location, propFullName) {
               var propValue = props[propName];
+
               if (!isValidElement(propValue)) {
                 var propType = getPropType(propValue);
                 return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + propType + '` supplied to `' + componentName + '`, expected a single ReactElement.'));
               }
+
               return null;
             }
+
             return createChainableTypeChecker(validate);
           }
 
@@ -678,8 +863,10 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
                 var actualClassName = getClassName(props[propName]);
                 return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + actualClassName + '` supplied to `' + componentName + '`, expected ') + ('instance of `' + expectedClassName + '`.'));
               }
+
               return null;
             }
+
             return createChainableTypeChecker(validate);
           }
 
@@ -691,6 +878,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
             function validate(props, propName, componentName, location, propFullName) {
               var propValue = props[propName];
+
               for (var i = 0; i < expectedValues.length; i++) {
                 if (is(propValue, expectedValues[i])) {
                   return null;
@@ -700,6 +888,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
               var valuesString = JSON.stringify(expectedValues);
               return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of value `' + propValue + '` ' + ('supplied to `' + componentName + '`, expected one of ' + valuesString + '.'));
             }
+
             return createChainableTypeChecker(validate);
           }
 
@@ -708,21 +897,27 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
               if (typeof typeChecker !== 'function') {
                 return new PropTypeError('Property `' + propFullName + '` of component `' + componentName + '` has invalid PropType notation inside objectOf.');
               }
+
               var propValue = props[propName];
               var propType = getPropType(propValue);
+
               if (propType !== 'object') {
                 return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + propType + '` supplied to `' + componentName + '`, expected an object.'));
               }
+
               for (var key in propValue) {
                 if (propValue.hasOwnProperty(key)) {
                   var error = typeChecker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret);
+
                   if (error instanceof Error) {
                     return error;
                   }
                 }
               }
+
               return null;
             }
+
             return createChainableTypeChecker(validate);
           }
 
@@ -734,6 +929,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
             for (var i = 0; i < arrayOfTypeCheckers.length; i++) {
               var checker = arrayOfTypeCheckers[i];
+
               if (typeof checker !== 'function') {
                 printWarning('Invalid argument supplied to oneOfType. Expected an array of check functions, but ' + 'received ' + getPostfixForTypeWarning(checker) + ' at index ' + i + '.');
                 return emptyFunctionThatReturnsNull;
@@ -743,6 +939,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
             function validate(props, propName, componentName, location, propFullName) {
               for (var i = 0; i < arrayOfTypeCheckers.length; i++) {
                 var checker = arrayOfTypeCheckers[i];
+
                 if (checker(props, propName, componentName, location, propFullName, ReactPropTypesSecret) == null) {
                   return null;
                 }
@@ -750,6 +947,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
               return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` supplied to ' + ('`' + componentName + '`.'));
             }
+
             return createChainableTypeChecker(validate);
           }
 
@@ -758,8 +956,10 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
               if (!isNode(props[propName])) {
                 return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` supplied to ' + ('`' + componentName + '`, expected a ReactNode.'));
               }
+
               return null;
             }
+
             return createChainableTypeChecker(validate);
           }
 
@@ -767,21 +967,28 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
             function validate(props, propName, componentName, location, propFullName) {
               var propValue = props[propName];
               var propType = getPropType(propValue);
+
               if (propType !== 'object') {
                 return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type `' + propType + '` ' + ('supplied to `' + componentName + '`, expected `object`.'));
               }
+
               for (var key in shapeTypes) {
                 var checker = shapeTypes[key];
+
                 if (!checker) {
                   continue;
                 }
+
                 var error = checker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret);
+
                 if (error) {
                   return error;
                 }
               }
+
               return null;
             }
+
             return createChainableTypeChecker(validate);
           }
 
@@ -789,22 +996,29 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
             function validate(props, propName, componentName, location, propFullName) {
               var propValue = props[propName];
               var propType = getPropType(propValue);
+
               if (propType !== 'object') {
                 return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type `' + propType + '` ' + ('supplied to `' + componentName + '`, expected `object`.'));
-              }
-              // We need to check all keys in case some are required but missing from
+              } // We need to check all keys in case some are required but missing from
               // props.
+
+
               var allKeys = assign({}, props[propName], shapeTypes);
+
               for (var key in allKeys) {
                 var checker = shapeTypes[key];
+
                 if (!checker) {
                   return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` key `' + key + '` supplied to `' + componentName + '`.' + '\nBad object: ' + JSON.stringify(props[propName], null, '  ') + '\nValid keys: ' + JSON.stringify(Object.keys(shapeTypes), null, '  '));
                 }
+
                 var error = checker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret);
+
                 if (error) {
                   return error;
                 }
               }
+
               return null;
             }
 
@@ -812,25 +1026,30 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
           }
 
           function isNode(propValue) {
-            switch (typeof propValue === 'undefined' ? 'undefined' : _typeof(propValue)) {
+            switch (typeof propValue) {
               case 'number':
               case 'string':
               case 'undefined':
                 return true;
+
               case 'boolean':
                 return !propValue;
+
               case 'object':
                 if (Array.isArray(propValue)) {
                   return propValue.every(isNode);
                 }
+
                 if (propValue === null || isValidElement(propValue)) {
                   return true;
                 }
 
                 var iteratorFn = getIteratorFn(propValue);
+
                 if (iteratorFn) {
                   var iterator = iteratorFn.call(propValue);
                   var step;
+
                   if (iteratorFn !== propValue.entries) {
                     while (!(step = iterator.next()).done) {
                       if (!isNode(step.value)) {
@@ -841,6 +1060,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
                     // Iterator will provide entry [k,v] tuples rather than values.
                     while (!(step = iterator.next()).done) {
                       var entry = step.value;
+
                       if (entry) {
                         if (!isNode(entry[1])) {
                           return false;
@@ -853,6 +1073,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
                 }
 
                 return true;
+
               default:
                 return false;
             }
@@ -862,46 +1083,52 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
             // Native Symbol.
             if (propType === 'symbol') {
               return true;
-            }
+            } // 19.4.3.5 Symbol.prototype[@@toStringTag] === 'Symbol'
 
-            // 19.4.3.5 Symbol.prototype[@@toStringTag] === 'Symbol'
+
             if (propValue['@@toStringTag'] === 'Symbol') {
               return true;
-            }
+            } // Fallback for non-spec compliant Symbols which are polyfilled.
 
-            // Fallback for non-spec compliant Symbols which are polyfilled.
+
             if (typeof Symbol === 'function' && propValue instanceof Symbol) {
               return true;
             }
 
             return false;
-          }
+          } // Equivalent of `typeof` but with special handling for array and regexp.
 
-          // Equivalent of `typeof` but with special handling for array and regexp.
+
           function getPropType(propValue) {
-            var propType = typeof propValue === 'undefined' ? 'undefined' : _typeof(propValue);
+            var propType = typeof propValue;
+
             if (Array.isArray(propValue)) {
               return 'array';
             }
+
             if (propValue instanceof RegExp) {
               // Old webkits (at least until Android 4.0) return 'function' rather than
               // 'object' for typeof a RegExp. We'll normalize this here so that /bla/
               // passes PropTypes.object.
               return 'object';
             }
+
             if (isSymbol(propType, propValue)) {
               return 'symbol';
             }
-            return propType;
-          }
 
-          // This handles more types than `getPropType`. Only used for error messages.
+            return propType;
+          } // This handles more types than `getPropType`. Only used for error messages.
           // See `createPrimitiveTypeChecker`.
+
+
           function getPreciseType(propValue) {
             if (typeof propValue === 'undefined' || propValue === null) {
               return '' + propValue;
             }
+
             var propType = getPropType(propValue);
+
             if (propType === 'object') {
               if (propValue instanceof Date) {
                 return 'date';
@@ -909,80 +1136,91 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
                 return 'regexp';
               }
             }
-            return propType;
-          }
 
-          // Returns a string that is postfixed to a warning about an invalid type.
+            return propType;
+          } // Returns a string that is postfixed to a warning about an invalid type.
           // For example, "undefined" or "of type array"
+
+
           function getPostfixForTypeWarning(value) {
             var type = getPreciseType(value);
+
             switch (type) {
               case 'array':
               case 'object':
                 return 'an ' + type;
+
               case 'boolean':
               case 'date':
               case 'regexp':
                 return 'a ' + type;
+
               default:
                 return type;
             }
-          }
+          } // Returns class name of the object, if any.
 
-          // Returns class name of the object, if any.
+
           function getClassName(propValue) {
             if (!propValue.constructor || !propValue.constructor.name) {
               return ANONYMOUS;
             }
+
             return propValue.constructor.name;
           }
 
           ReactPropTypes.checkPropTypes = checkPropTypes;
           ReactPropTypes.PropTypes = ReactPropTypes;
-
           return ReactPropTypes;
         };
-
         /***/
+
       },
 
-      /***/"./node_modules/prop-types/index.js":
+      /***/
+      "./node_modules/prop-types/index.js":
       /*!******************************************!*\
         !*** ./node_modules/prop-types/index.js ***!
         \******************************************/
-      /*! no static exports found */
-      /***/function node_modulesPropTypesIndexJs(module, exports, __webpack_require__) {
 
+      /*! no static exports found */
+
+      /***/
+      function (module, exports, __webpack_require__) {
         /**
          * Copyright (c) 2013-present, Facebook, Inc.
          *
          * This source code is licensed under the MIT license found in the
          * LICENSE file in the root directory of this source tree.
          */
-
         if (true) {
           var REACT_ELEMENT_TYPE = typeof Symbol === 'function' && Symbol.for && Symbol.for('react.element') || 0xeac7;
 
-          var isValidElement = function isValidElement(object) {
-            return (typeof object === 'undefined' ? 'undefined' : _typeof(object)) === 'object' && object !== null && object.$$typeof === REACT_ELEMENT_TYPE;
-          };
-
-          // By explicitly using `prop-types` you are opting into new development behavior.
+          var isValidElement = function (object) {
+            return typeof object === 'object' && object !== null && object.$$typeof === REACT_ELEMENT_TYPE;
+          }; // By explicitly using `prop-types` you are opting into new development behavior.
           // http://fb.me/prop-types-in-prod
-          var throwOnDirectAccess = true;
-          module.exports = __webpack_require__( /*! ./factoryWithTypeCheckers */"./node_modules/prop-types/factoryWithTypeCheckers.js")(isValidElement, throwOnDirectAccess);
-        } else {}
 
+
+          var throwOnDirectAccess = true;
+          module.exports = __webpack_require__(
+          /*! ./factoryWithTypeCheckers */
+          "./node_modules/prop-types/factoryWithTypeCheckers.js")(isValidElement, throwOnDirectAccess);
+        } else {}
         /***/
+
       },
 
-      /***/"./node_modules/prop-types/lib/ReactPropTypesSecret.js":
+      /***/
+      "./node_modules/prop-types/lib/ReactPropTypesSecret.js":
       /*!*************************************************************!*\
         !*** ./node_modules/prop-types/lib/ReactPropTypesSecret.js ***!
         \*************************************************************/
-      /*! no static exports found */
-      /***/function node_modulesPropTypesLibReactPropTypesSecretJs(module, exports, __webpack_require__) {
 
+      /*! no static exports found */
+
+      /***/
+      function (module, exports, __webpack_require__) {
         "use strict";
         /**
          * Copyright (c) 2013-present, Facebook, Inc.
@@ -992,209 +1230,260 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
          */
 
         var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
-
         module.exports = ReactPropTypesSecret;
-
         /***/
       },
 
-      /***/"./node_modules/react-hot-loader/dist/react-hot-loader.production.min.js":
+      /***/
+      "./node_modules/react-hot-loader/dist/react-hot-loader.production.min.js":
       /*!*******************************************************************************!*\
         !*** ./node_modules/react-hot-loader/dist/react-hot-loader.production.min.js ***!
         \*******************************************************************************/
-      /*! no static exports found */
-      /***/function node_modulesReactHotLoaderDistReactHotLoaderProductionMinJs(module, exports, __webpack_require__) {
 
+      /*! no static exports found */
+
+      /***/
+      function (module, exports, __webpack_require__) {
         "use strict";
 
         function _interopDefault(t) {
-          return t && "object" == (typeof t === 'undefined' ? 'undefined' : _typeof(t)) && "default" in t ? t.default : t;
-        }Object.defineProperty(exports, "__esModule", { value: !0 });var React = _interopDefault(__webpack_require__( /*! react */"react")),
-            classCallCheck = function classCallCheck(t, e) {
+          return t && "object" == typeof t && "default" in t ? t.default : t;
+        }
+
+        Object.defineProperty(exports, "__esModule", {
+          value: !0
+        });
+
+        var React = _interopDefault(__webpack_require__(
+        /*! react */
+        "react")),
+            classCallCheck = function (t, e) {
           if (!(t instanceof e)) throw new TypeError("Cannot call a class as a function");
         },
-            inherits = function inherits(t, e) {
-          if ("function" != typeof e && null !== e) throw new TypeError("Super expression must either be null or a function, not " + (typeof e === 'undefined' ? 'undefined' : _typeof(e)));t.prototype = Object.create(e && e.prototype, { constructor: { value: t, enumerable: !1, writable: !0, configurable: !0 } }), e && (Object.setPrototypeOf ? Object.setPrototypeOf(t, e) : t.__proto__ = e);
+            inherits = function (t, e) {
+          if ("function" != typeof e && null !== e) throw new TypeError("Super expression must either be null or a function, not " + typeof e);
+          t.prototype = Object.create(e && e.prototype, {
+            constructor: {
+              value: t,
+              enumerable: !1,
+              writable: !0,
+              configurable: !0
+            }
+          }), e && (Object.setPrototypeOf ? Object.setPrototypeOf(t, e) : t.__proto__ = e);
         },
-            possibleConstructorReturn = function possibleConstructorReturn(t, e) {
-          if (!t) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return !e || "object" != (typeof e === 'undefined' ? 'undefined' : _typeof(e)) && "function" != typeof e ? t : e;
+            possibleConstructorReturn = function (t, e) {
+          if (!t) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+          return !e || "object" != typeof e && "function" != typeof e ? t : e;
         },
             AppContainer = function (t) {
           function e() {
             return classCallCheck(this, e), possibleConstructorReturn(this, t.apply(this, arguments));
-          }return inherits(e, t), e.prototype.render = function () {
+          }
+
+          return inherits(e, t), e.prototype.render = function () {
             return React.Children.only(this.props.children);
           }, e;
         }(React.Component),
-            hot_prod = function hot_prod() {
+            hot_prod = function () {
           return function (t) {
             return t;
           };
         },
-            areComponentsEqual = function areComponentsEqual(t, e) {
+            areComponentsEqual = function (t, e) {
           return t === e;
         },
-            setConfig = function setConfig() {},
-            cold = function cold(t) {
+            setConfig = function () {},
+            cold = function (t) {
           return t;
-        };exports.AppContainer = AppContainer, exports.hot = hot_prod, exports.areComponentsEqual = areComponentsEqual, exports.setConfig = setConfig, exports.cold = cold;
+        };
 
+        exports.AppContainer = AppContainer, exports.hot = hot_prod, exports.areComponentsEqual = areComponentsEqual, exports.setConfig = setConfig, exports.cold = cold;
         /***/
       },
 
-      /***/"./node_modules/react-hot-loader/index.js":
+      /***/
+      "./node_modules/react-hot-loader/index.js":
       /*!************************************************!*\
         !*** ./node_modules/react-hot-loader/index.js ***!
         \************************************************/
-      /*! no static exports found */
-      /***/function node_modulesReactHotLoaderIndexJs(module, exports, __webpack_require__) {
 
+      /*! no static exports found */
+
+      /***/
+      function (module, exports, __webpack_require__) {
         "use strict";
 
         if (true) {
-          module.exports = __webpack_require__( /*! ./dist/react-hot-loader.production.min.js */"./node_modules/react-hot-loader/dist/react-hot-loader.production.min.js");
+          module.exports = __webpack_require__(
+          /*! ./dist/react-hot-loader.production.min.js */
+          "./node_modules/react-hot-loader/dist/react-hot-loader.production.min.js");
         } else {}
-
         /***/
+
       },
 
-      /***/"./node_modules/react-hot-loader/patch.js":
+      /***/
+      "./node_modules/react-hot-loader/patch.js":
       /*!************************************************!*\
         !*** ./node_modules/react-hot-loader/patch.js ***!
         \************************************************/
-      /*! no static exports found */
-      /***/function node_modulesReactHotLoaderPatchJs(module, exports, __webpack_require__) {
 
+      /*! no static exports found */
+
+      /***/
+      function (module, exports, __webpack_require__) {
         "use strict";
 
         if (true) {
-          module.exports = __webpack_require__( /*! ./dist/react-hot-loader.production.min.js */"./node_modules/react-hot-loader/dist/react-hot-loader.production.min.js");
+          module.exports = __webpack_require__(
+          /*! ./dist/react-hot-loader.production.min.js */
+          "./node_modules/react-hot-loader/dist/react-hot-loader.production.min.js");
         } else {}
-
         /***/
+
       },
 
-      /***/"./node_modules/webpack/buildin/module.js":
-      /*!***********************************!*\
-        !*** (webpack)/buildin/module.js ***!
-        \***********************************/
-      /*! no static exports found */
-      /***/function node_modulesWebpackBuildinModuleJs(module, exports) {
+      /***/
+      "./node_modules/webpack/buildin/harmony-module.js":
+      /*!*******************************************!*\
+        !*** (webpack)/buildin/harmony-module.js ***!
+        \*******************************************/
 
-        module.exports = function (module) {
-          if (!module.webpackPolyfill) {
-            module.deprecate = function () {};
-            module.paths = [];
-            // module.parent = undefined by default
+      /*! no static exports found */
+
+      /***/
+      function (module, exports) {
+        module.exports = function (originalModule) {
+          if (!originalModule.webpackPolyfill) {
+            var module = Object.create(originalModule); // module.parent = undefined by default
+
             if (!module.children) module.children = [];
             Object.defineProperty(module, "loaded", {
               enumerable: true,
-              get: function get() {
+              get: function () {
                 return module.l;
               }
             });
             Object.defineProperty(module, "id", {
               enumerable: true,
-              get: function get() {
+              get: function () {
                 return module.i;
               }
             });
+            Object.defineProperty(module, "exports", {
+              enumerable: true
+            });
             module.webpackPolyfill = 1;
           }
+
           return module;
         };
-
         /***/
+
       },
 
-      /***/"./src/SpeedyReader.js":
+      /***/
+      "./src/SpeedyReader.js":
       /*!*****************************!*\
         !*** ./src/SpeedyReader.js ***!
         \*****************************/
-      /*! no static exports found */
-      /***/function srcSpeedyReaderJs(module, exports, __webpack_require__) {
 
+      /*! exports provided: MILLISECONDS_IN_MINUTE, WHITESPACE_SEPARATOR, default */
+
+      /***/
+      function (module, __webpack_exports__, __webpack_require__) {
         "use strict";
+
+        __webpack_require__.r(__webpack_exports__);
         /* WEBPACK VAR INJECTION */
+
+
         (function (module) {
-
-          Object.defineProperty(exports, "__esModule", {
-            value: true
+          /* harmony export (binding) */
+          __webpack_require__.d(__webpack_exports__, "MILLISECONDS_IN_MINUTE", function () {
+            return MILLISECONDS_IN_MINUTE;
           });
-          exports.WHITESPACE_SEPARATOR = exports.MILLISECONDS_IN_MINUTE = undefined;
+          /* harmony export (binding) */
 
-          var _extends = Object.assign || function (target) {
-            for (var i = 1; i < arguments.length; i++) {
-              var source = arguments[i];for (var key in source) {
-                if (Object.prototype.hasOwnProperty.call(source, key)) {
-                  target[key] = source[key];
-                }
-              }
-            }return target;
-          };
 
-          var _createClass = function () {
-            function defineProperties(target, props) {
-              for (var i = 0; i < props.length; i++) {
-                var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
-              }
-            }return function (Constructor, protoProps, staticProps) {
-              if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
-            };
-          }();
+          __webpack_require__.d(__webpack_exports__, "WHITESPACE_SEPARATOR", function () {
+            return WHITESPACE_SEPARATOR;
+          });
+          /* harmony import */
 
-          var _react = __webpack_require__( /*! react */"react");
 
-          var _react2 = _interopRequireDefault(_react);
+          var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+          /*! react */
+          "react");
+          /* harmony import */
 
-          var _propTypes = __webpack_require__( /*! prop-types */"./node_modules/prop-types/index.js");
 
-          var _propTypes2 = _interopRequireDefault(_propTypes);
+          var react__WEBPACK_IMPORTED_MODULE_0___default =
+          /*#__PURE__*/
+          __webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+          /* harmony import */
 
-          function _interopRequireDefault(obj) {
-            return obj && obj.__esModule ? obj : { default: obj };
-          }
+
+          var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+          /*! prop-types */
+          "./node_modules/prop-types/index.js");
+          /* harmony import */
+
+
+          var prop_types__WEBPACK_IMPORTED_MODULE_1___default =
+          /*#__PURE__*/
+          __webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
 
           (function () {
-            var enterModule = __webpack_require__( /*! react-hot-loader */"./node_modules/react-hot-loader/index.js").enterModule;
+            var enterModule = __webpack_require__(
+            /*! react-hot-loader */
+            "./node_modules/react-hot-loader/index.js").enterModule;
 
             enterModule && enterModule(module);
           })();
 
-          function _classCallCheck(instance, Constructor) {
-            if (!(instance instanceof Constructor)) {
-              throw new TypeError("Cannot call a class as a function");
+          function _objectSpread(target) {
+            for (var i = 1; i < arguments.length; i++) {
+              var source = arguments[i] != null ? arguments[i] : {};
+              var ownKeys = Object.keys(source);
+
+              if (typeof Object.getOwnPropertySymbols === 'function') {
+                ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {
+                  return Object.getOwnPropertyDescriptor(source, sym).enumerable;
+                }));
+              }
+
+              ownKeys.forEach(function (key) {
+                _defineProperty(target, key, source[key]);
+              });
             }
+
+            return target;
           }
 
-          function _possibleConstructorReturn(self, call) {
-            if (!self) {
-              throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-            }return call && ((typeof call === 'undefined' ? 'undefined' : _typeof(call)) === "object" || typeof call === "function") ? call : self;
+          function _defineProperty(obj, key, value) {
+            if (key in obj) {
+              Object.defineProperty(obj, key, {
+                value: value,
+                enumerable: true,
+                configurable: true,
+                writable: true
+              });
+            } else {
+              obj[key] = value;
+            }
+
+            return obj;
           }
 
-          function _inherits(subClass, superClass) {
-            if (typeof superClass !== "function" && superClass !== null) {
-              throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === 'undefined' ? 'undefined' : _typeof(superClass)));
-            }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-          }
-
-          var MILLISECONDS_IN_MINUTE = exports.MILLISECONDS_IN_MINUTE = 60000;
-          var WHITESPACE_SEPARATOR = exports.WHITESPACE_SEPARATOR = ' ';
-
+          const MILLISECONDS_IN_MINUTE = 60000;
+          const WHITESPACE_SEPARATOR = ' ';
           /**
            * Text streaming component for React
            * @class
            */
 
-          var SpeedyReader = function (_Component) {
-            _inherits(SpeedyReader, _Component);
-
-            /**
-             * constructor
-             * @param {object} props The properties for the component
-             */
-
+          class SpeedyReader extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
             /**
              * Component's default props
              * @type {object}
@@ -1202,33 +1491,6 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
              * @property {Function} onFinish=undefined Default for when the onFinish property hasn't been set
              * @property {number} speed=250 Default for when the speed property hasn't been set
              * @property {number} wordChunk=1 Default for when the wordChunk hasn't been set
-             */
-            function SpeedyReader(props) {
-              _classCallCheck(this, SpeedyReader);
-
-              /**
-               * Internal state for the component
-               * @type {object}
-               * @property {number} currentPosition The current position for the reader within the input text
-               * @property {string} currentText The current text to be displayed to the user
-               * @property {boolean} isPlaying Indicates whether the reader is playing the words
-               * @property {string} words All the words contained with the passage of text
-               */
-              var _this = _possibleConstructorReturn(this, (SpeedyReader.__proto__ || Object.getPrototypeOf(SpeedyReader)).call(this, props));
-
-              _this.state = _this.getInitialState();
-              /**
-               * The timer instance id
-               * @type {number}
-               */
-              _this.timer = null;
-              return _this;
-            }
-
-            /**
-             * Returns the initial state
-             * @returns {object} Returns the initial state for the speedy reader instance
-             * @private
              */
 
             /**
@@ -1241,341 +1503,365 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
              * @property {PropTypes.Requireable<any>} wordChunk The number of words to be display per update
              */
 
-            _createClass(SpeedyReader, [{
-              key: 'getInitialState',
-              value: function getInitialState() {
-                var _props = this.props,
-                    autoPlay = _props.autoPlay,
-                    inputText = _props.inputText;
-
-                var words = this.getWords(inputText);
-
-                return {
-                  currentPosition: 0,
-                  currentText: '',
-                  isPlaying: autoPlay,
-                  words: words
-                };
-              }
-            }, {
-              key: 'componentDidMount',
-              value: function componentDidMount() {
-                var autoPlay = this.props.autoPlay;
-
-                if (autoPlay) {
-                  this.play();
-                }
-              }
-            }, {
-              key: 'componentWillReceiveProps',
-              value: function componentWillReceiveProps(nextProps) {
-                var _props2 = this.props,
-                    speed = _props2.speed,
-                    wordChunk = _props2.wordChunk;
-                var isPlaying = this.state.isPlaying;
-
-                var needsUpdating = isPlaying && (nextProps.speed !== speed || nextProps.wordChunk !== wordChunk);
-
-                if (needsUpdating) {
-                  this.update();
-                }
-              }
-            }, {
-              key: 'componentWillUnmount',
-              value: function componentWillUnmount() {
-                if (this.timer) {
-                  clearTimeout(this.timer);
-                }
-              }
-
+            /**
+             * constructor
+             * @param {object} props The properties for the component
+             */
+            constructor(props) {
+              super(props);
               /**
-               * Returns the words in the sentence, filtering out empty strings
-               * @param {string} sentence - The sentence containing the words
-               * @returns {string[]} Returns the list of words within a sentence
-               * @private
+               * Internal state for the component
+               * @type {object}
+               * @property {number} currentPosition The current position for the reader within the input text
+               * @property {string} currentText The current text to be displayed to the user
+               * @property {boolean} isPlaying Indicates whether the reader is playing the words
+               * @property {string} words All the words contained with the passage of text
                */
 
-            }, {
-              key: 'getWords',
-              value: function getWords(sentence) {
-                if (!sentence) {
-                  return [];
-                }
-
-                return sentence.split(/\s+/g).filter(Boolean);
-              }
-
+              this.state = this.getInitialState();
               /**
-               * Pauses playing of the words for the speed reading
-               * @returns {void}
+               * The timer instance id
+               * @type {number}
                */
 
-            }, {
-              key: 'pause',
-              value: function pause() {
-                var _this2 = this;
+              this.timer = null;
+            }
+            /**
+             * Returns the initial state
+             * @returns {object} Returns the initial state for the speedy reader instance
+             * @private
+             */
 
+
+            getInitialState() {
+              const {
+                autoPlay,
+                inputText
+              } = this.props;
+              const words = this.getWords(inputText);
+              return {
+                currentPosition: 0,
+                currentText: '',
+                isPlaying: autoPlay,
+                words
+              };
+            }
+
+            componentDidMount() {
+              const {
+                autoPlay
+              } = this.props;
+
+              if (autoPlay) {
+                this.play();
+              }
+            }
+
+            componentWillReceiveProps(nextProps) {
+              const {
+                speed,
+                wordChunk
+              } = this.props;
+              const {
+                isPlaying
+              } = this.state;
+              const needsUpdating = isPlaying && (nextProps.speed !== speed || nextProps.wordChunk !== wordChunk);
+
+              if (needsUpdating) {
+                this.update();
+              }
+            }
+
+            componentWillUnmount() {
+              if (this.timer) {
+                clearTimeout(this.timer);
+              }
+            }
+            /**
+             * Returns the words in the sentence, filtering out empty strings
+             * @param {string} sentence - The sentence containing the words
+             * @returns {string[]} Returns the list of words within a sentence
+             * @private
+             */
+
+
+            getWords(sentence) {
+              if (!sentence) {
+                return [];
+              }
+
+              return sentence.split(/\s+/g).filter(Boolean);
+            }
+            /**
+             * Pauses playing of the words for the speed reading
+             * @returns {void}
+             */
+
+
+            pause() {
+              this.setState({
+                isPlaying: false
+              }, () => this.update());
+            }
+            /**
+             * Resumes playing of the words for the speed reading
+             * @returns {void}
+             */
+
+
+            play() {
+              this.setState({
+                isPlaying: true
+              }, () => this.update());
+            }
+            /**
+             * Resets the speedy reader to the initial state
+             * @param {boolean} [autoPlay=true] - Indicates whether speedy reader should auto play once reset
+             * @returns {void}
+             */
+
+
+            reset(autoPlay = true) {
+              this.setState(_objectSpread({}, this.getInitialState(), {
+                isPlaying: autoPlay
+              }), () => this.update());
+            }
+            /**
+             * Updates the speedy reader state with the current text to be displayed to the user
+             * @returns {void}
+             * @private
+             */
+
+
+            update() {
+              if (this.timer) {
+                clearTimeout(this.timer);
+              }
+
+              const {
+                isPlaying
+              } = this.state;
+
+              if (!isPlaying) {
+                return;
+              }
+
+              const {
+                speed,
+                wordChunk,
+                onFinish
+              } = this.props;
+              const timeout = MILLISECONDS_IN_MINUTE / speed;
+              this.timer = setTimeout(() => {
+                let {
+                  currentPosition
+                } = this.state;
+                const {
+                  words
+                } = this.state;
+                const numberOfWords = words.length; // move current position forward
+
+                currentPosition += wordChunk; // recalculate start position and words to be read
+
+                let currentStartPosition = wordChunk >= numberOfWords - 1 ? 0 : currentPosition - wordChunk;
+                const currentTextWords = words.slice(currentStartPosition, currentPosition);
+                const currentText = currentTextWords.join(WHITESPACE_SEPARATOR);
                 this.setState({
-                  isPlaying: false
-                }, function () {
-                  return _this2.update();
+                  currentPosition,
+                  currentText
+                }, () => {
+                  currentStartPosition += wordChunk;
+
+                  if (currentStartPosition < numberOfWords) {
+                    this.update();
+                  } else {
+                    this.timer = setTimeout(() => {
+                      this.setState({
+                        isPlaying: false
+                      }, () => {
+                        if (onFinish) {
+                          onFinish();
+                        }
+                      });
+                    }, timeout);
+                  }
                 });
+              }, timeout);
+            }
+            /**
+             * Renders the Speedy Reader component
+             * @return {ReactElement} Renders the Speedy Reader markup
+             */
+
+
+            render() {
+              const {
+                currentText
+              } = this.state;
+
+              if (!currentText) {
+                return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "\xA0");
               }
 
-              /**
-               * Resumes playing of the words for the speed reading
-               * @returns {void}
-               */
+              return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, currentText);
+            } // @ts-ignore
 
-            }, {
-              key: 'play',
-              value: function play() {
-                var _this3 = this;
 
-                this.setState({
-                  isPlaying: true
-                }, function () {
-                  return _this3.update();
-                });
-              }
-
-              /**
-               * Resets the speedy reader to the initial state
-               * @param {boolean} [autoPlay=true] - Indicates whether speedy reader should auto play once reset
-               * @returns {void}
-               */
-
-            }, {
-              key: 'reset',
-              value: function reset() {
-                var _this4 = this;
-
-                var autoPlay = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;
-
-                this.setState(_extends({}, this.getInitialState(), {
-                  isPlaying: autoPlay
-                }), function () {
-                  return _this4.update();
-                });
-              }
-
-              /**
-               * Updates the speedy reader state with the current text to be displayed to the user
-               * @returns {void}
-               * @private
-               */
-
-            }, {
-              key: 'update',
-              value: function update() {
-                var _this5 = this;
-
-                if (this.timer) {
-                  clearTimeout(this.timer);
-                }
-
-                var isPlaying = this.state.isPlaying;
-
-                if (!isPlaying) {
-                  return;
-                }
-
-                var _props3 = this.props,
-                    speed = _props3.speed,
-                    wordChunk = _props3.wordChunk,
-                    onFinish = _props3.onFinish;
-
-                var timeout = MILLISECONDS_IN_MINUTE / speed;
-                this.timer = setTimeout(function () {
-                  var currentPosition = _this5.state.currentPosition;
-                  var words = _this5.state.words;
-
-                  var numberOfWords = words.length;
-
-                  // move current position forward
-                  currentPosition += wordChunk;
-
-                  // recalculate start position and words to be read
-                  var currentStartPosition = wordChunk >= numberOfWords - 1 ? 0 : currentPosition - wordChunk;
-
-                  var currentTextWords = words.slice(currentStartPosition, currentPosition);
-
-                  var currentText = currentTextWords.join(WHITESPACE_SEPARATOR);
-
-                  _this5.setState({
-                    currentPosition: currentPosition,
-                    currentText: currentText
-                  }, function () {
-                    currentStartPosition += wordChunk;
-
-                    if (currentStartPosition < numberOfWords) {
-                      _this5.update();
-                    } else {
-                      _this5.timer = setTimeout(function () {
-                        _this5.setState({
-                          isPlaying: false
-                        }, function () {
-                          if (onFinish) {
-                            onFinish();
-                          }
-                        });
-                      }, timeout);
-                    }
-                  });
-                }, timeout);
-              }
-
-              /**
-               * Renders the Speedy Reader component
-               * @return {ReactElement} Renders the Speedy Reader markup
-               */
-
-            }, {
-              key: 'render',
-              value: function render() {
-                var currentText = this.state.currentText;
-
-                if (!currentText) {
-                  return _react2.default.createElement('span', null, '\xA0');
-                }
-
-                return _react2.default.createElement('span', null, currentText);
-              }
-            }, {
-              key: '__reactstandin__regenerateByEval',
+            __reactstandin__regenerateByEval(key, code) {
               // @ts-ignore
-              value: function __reactstandin__regenerateByEval(key, code) {
-                // @ts-ignore
-                this[key] = eval(code);
-              }
-            }]);
+              this[key] = eval(code);
+            }
 
-            return SpeedyReader;
-          }(_react.Component);
+          }
 
-          SpeedyReader.defaultProps = {
+          _defineProperty(SpeedyReader, "defaultProps", {
             autoPlay: false,
             onFinish: undefined,
             speed: 250,
             wordChunk: 1
-          };
-          SpeedyReader.propTypes = {
-            autoPlay: _propTypes2.default.bool,
-            inputText: _propTypes2.default.string.isRequired,
-            onFinish: _propTypes2.default.func,
-            speed: _propTypes2.default.number,
-            wordChunk: _propTypes2.default.number
-          };
-          var _default = SpeedyReader;
-          exports.default = _default;
+          });
+
+          _defineProperty(SpeedyReader, "propTypes", {
+            autoPlay: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool,
+            inputText: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string.isRequired,
+            onFinish: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func,
+            speed: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number,
+            wordChunk: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number
+          });
+
+          const _default = SpeedyReader;
+          /* harmony default export */
+
+          __webpack_exports__["default"] = _default;
           ;
 
           (function () {
-            var reactHotLoader = __webpack_require__( /*! react-hot-loader */"./node_modules/react-hot-loader/index.js").default;
+            var reactHotLoader = __webpack_require__(
+            /*! react-hot-loader */
+            "./node_modules/react-hot-loader/index.js").default;
 
-            var leaveModule = __webpack_require__( /*! react-hot-loader */"./node_modules/react-hot-loader/index.js").leaveModule;
+            var leaveModule = __webpack_require__(
+            /*! react-hot-loader */
+            "./node_modules/react-hot-loader/index.js").leaveModule;
 
             if (!reactHotLoader) {
               return;
             }
 
-            reactHotLoader.register(MILLISECONDS_IN_MINUTE, 'MILLISECONDS_IN_MINUTE', 'D:/Users/Carl/Documents/GitHub/react-speedy-reader/src/SpeedyReader.js');
-            reactHotLoader.register(WHITESPACE_SEPARATOR, 'WHITESPACE_SEPARATOR', 'D:/Users/Carl/Documents/GitHub/react-speedy-reader/src/SpeedyReader.js');
-            reactHotLoader.register(SpeedyReader, 'SpeedyReader', 'D:/Users/Carl/Documents/GitHub/react-speedy-reader/src/SpeedyReader.js');
-            reactHotLoader.register(_default, 'default', 'D:/Users/Carl/Documents/GitHub/react-speedy-reader/src/SpeedyReader.js');
+            reactHotLoader.register(MILLISECONDS_IN_MINUTE, "MILLISECONDS_IN_MINUTE", "D:\\Users\\Carl\\Documents\\GitHub\\react-speedy-reader\\src\\SpeedyReader.js");
+            reactHotLoader.register(WHITESPACE_SEPARATOR, "WHITESPACE_SEPARATOR", "D:\\Users\\Carl\\Documents\\GitHub\\react-speedy-reader\\src\\SpeedyReader.js");
+            reactHotLoader.register(SpeedyReader, "SpeedyReader", "D:\\Users\\Carl\\Documents\\GitHub\\react-speedy-reader\\src\\SpeedyReader.js");
+            reactHotLoader.register(_default, "default", "D:\\Users\\Carl\\Documents\\GitHub\\react-speedy-reader\\src\\SpeedyReader.js");
             leaveModule(module);
           })();
 
           ;
           /* WEBPACK VAR INJECTION */
-        }).call(this, __webpack_require__( /*! ./../node_modules/webpack/buildin/module.js */"./node_modules/webpack/buildin/module.js")(module));
-
+        }).call(this, __webpack_require__(
+        /*! ./../node_modules/webpack/buildin/harmony-module.js */
+        "./node_modules/webpack/buildin/harmony-module.js")(module));
         /***/
       },
 
-      /***/"./src/index.js":
+      /***/
+      "./src/index.js":
       /*!**********************!*\
         !*** ./src/index.js ***!
         \**********************/
-      /*! no static exports found */
-      /***/function srcIndexJs(module, exports, __webpack_require__) {
 
+      /*! exports provided: default */
+
+      /***/
+      function (module, __webpack_exports__, __webpack_require__) {
         "use strict";
+
+        __webpack_require__.r(__webpack_exports__);
         /* WEBPACK VAR INJECTION */
+
+
         (function (module) {
-
-          Object.defineProperty(exports, "__esModule", {
-            value: true
-          });
-
-          var _SpeedyReader = __webpack_require__( /*! ./SpeedyReader */"./src/SpeedyReader.js");
-
-          var _SpeedyReader2 = _interopRequireDefault(_SpeedyReader);
-
-          function _interopRequireDefault(obj) {
-            return obj && obj.__esModule ? obj : { default: obj };
-          }
+          /* harmony import */
+          var _SpeedyReader__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+          /*! ./SpeedyReader */
+          "./src/SpeedyReader.js");
 
           (function () {
-            var enterModule = __webpack_require__( /*! react-hot-loader */"./node_modules/react-hot-loader/index.js").enterModule;
+            var enterModule = __webpack_require__(
+            /*! react-hot-loader */
+            "./node_modules/react-hot-loader/index.js").enterModule;
 
             enterModule && enterModule(module);
           })();
 
-          var _default = _SpeedyReader2.default;
-          exports.default = _default;
+          const _default = _SpeedyReader__WEBPACK_IMPORTED_MODULE_0__["default"];
+          /* harmony default export */
+
+          __webpack_exports__["default"] = _default;
           ;
 
           (function () {
-            var reactHotLoader = __webpack_require__( /*! react-hot-loader */"./node_modules/react-hot-loader/index.js").default;
+            var reactHotLoader = __webpack_require__(
+            /*! react-hot-loader */
+            "./node_modules/react-hot-loader/index.js").default;
 
-            var leaveModule = __webpack_require__( /*! react-hot-loader */"./node_modules/react-hot-loader/index.js").leaveModule;
+            var leaveModule = __webpack_require__(
+            /*! react-hot-loader */
+            "./node_modules/react-hot-loader/index.js").leaveModule;
 
             if (!reactHotLoader) {
               return;
             }
 
-            reactHotLoader.register(_default, 'default', 'D:/Users/Carl/Documents/GitHub/react-speedy-reader/src/index.js');
+            reactHotLoader.register(_default, "default", "D:\\Users\\Carl\\Documents\\GitHub\\react-speedy-reader\\src\\index.js");
             leaveModule(module);
           })();
 
           ;
           /* WEBPACK VAR INJECTION */
-        }).call(this, __webpack_require__( /*! ./../node_modules/webpack/buildin/module.js */"./node_modules/webpack/buildin/module.js")(module));
-
+        }).call(this, __webpack_require__(
+        /*! ./../node_modules/webpack/buildin/harmony-module.js */
+        "./node_modules/webpack/buildin/harmony-module.js")(module));
         /***/
       },
 
-      /***/0:
+      /***/
+      0:
       /*!***************************************************!*\
         !*** multi react-hot-loader/patch ./src/index.js ***!
         \***************************************************/
+
       /*! no static exports found */
-      /***/function _(module, exports, __webpack_require__) {
 
-        __webpack_require__( /*! react-hot-loader/patch */"./node_modules/react-hot-loader/patch.js");
-        module.exports = __webpack_require__( /*! ./src/index.js */"./src/index.js");
+      /***/
+      function (module, exports, __webpack_require__) {
+        __webpack_require__(
+        /*! react-hot-loader/patch */
+        "./node_modules/react-hot-loader/patch.js");
 
+        module.exports = __webpack_require__(
+        /*! ./src/index.js */
+        "./src/index.js");
         /***/
       },
 
-      /***/"react":
+      /***/
+      "react":
       /*!**************************************************************************************!*\
         !*** external {"root":"React","commonjs2":"react","commonjs":"react","amd":"react"} ***!
         \**************************************************************************************/
+
       /*! no static exports found */
-      /***/function react(module, exports) {
 
+      /***/
+      function (module, exports) {
         module.exports = __WEBPACK_EXTERNAL_MODULE_react__;
-
         /***/
       }
+      /******/
 
-      /******/ })
+    })
   );
 });
-//# sourceMappingURL=index.js.map
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../node_modules/webpack/buildin/module.js */ "../../node_modules/webpack/buildin/module.js")(module)))
 
 /***/ }),
 
@@ -21510,72 +21796,32 @@ if (false) {} else {
 
 /***/ }),
 
-/***/ "../../node_modules/webpack/buildin/module.js":
-/*!***********************************!*\
-  !*** (webpack)/buildin/module.js ***!
-  \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = function(module) {
-	if (!module.webpackPolyfill) {
-		module.deprecate = function() {};
-		module.paths = [];
-		// module.parent = undefined by default
-		if (!module.children) module.children = [];
-		Object.defineProperty(module, "loaded", {
-			enumerable: true,
-			get: function() {
-				return module.l;
-			}
-		});
-		Object.defineProperty(module, "id", {
-			enumerable: true,
-			get: function() {
-				return module.i;
-			}
-		});
-		module.webpackPolyfill = 1;
-	}
-	return module;
-};
-
-
-/***/ }),
-
 /***/ "./index.js":
 /*!******************!*\
   !*** ./index.js ***!
   \******************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "../../node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "../../node_modules/react-dom/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_speedy_reader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-speedy-reader */ "../../dist/index.js");
+/* harmony import */ var react_speedy_reader__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_speedy_reader__WEBPACK_IMPORTED_MODULE_2__);
 
 
-var _react = __webpack_require__(/*! react */ "../../node_modules/react/index.js");
+ // eslint-disable-line
 
-var _react2 = _interopRequireDefault(_react);
-
-var _reactDom = __webpack_require__(/*! react-dom */ "../../node_modules/react-dom/index.js");
-
-var _reactSpeedyReader = __webpack_require__(/*! react-speedy-reader */ "../../dist/index.js");
-
-var _reactSpeedyReader2 = _interopRequireDefault(_reactSpeedyReader);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-// eslint-disable-line
-
-(0, _reactDom.render)(_react2.default.createElement(
-  'div',
-  { className: 'demo' },
-  _react2.default.createElement(_reactSpeedyReader2.default, {
-    autoPlay: true,
-    inputText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ' + 'Fusce dignissim urna turpis, sed interdum massa tincidunt eget. ' + 'Duis leo nisl, eleifend ac turpis vitae, cursus sagittis leo. ' + 'Nullam sit amet.',
-    wordChunk: 1
-  })
-), document.getElementById('app'));
+Object(react_dom__WEBPACK_IMPORTED_MODULE_1__["render"])(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  className: "demo"
+}, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_speedy_reader__WEBPACK_IMPORTED_MODULE_2___default.a, {
+  autoPlay: true,
+  inputText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ' + 'Fusce dignissim urna turpis, sed interdum massa tincidunt eget. ' + 'Duis leo nisl, eleifend ac turpis vitae, cursus sagittis leo. ' + 'Nullam sit amet.',
+  wordChunk: 1
+})), document.getElementById('app'));
 
 /***/ }),
 

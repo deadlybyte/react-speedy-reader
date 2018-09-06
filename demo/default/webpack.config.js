@@ -20,7 +20,14 @@ module.exports = {
   },
   module: {
     rules: [
-      { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
+      { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/, options: { babelrc: false, plugins: [
+        "@babel/plugin-proposal-class-properties",
+        "@babel/plugin-proposal-function-bind",
+        "@babel/plugin-proposal-object-rest-spread",
+        "react-hot-loader/babel"
+      ], "presets": [
+        "@babel/preset-react"
+      ] } },
       { test: /\.js$/, loader: 'eslint-loader', exclude: [/node_modules/, /dist/] },
     ],
   },
