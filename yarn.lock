@@ -615,8 +615,8 @@
   resolved "https://registry.yarnpkg.com/@types/expect/-/expect-1.20.3.tgz#a99d059ace4bd051332faf03f5b4b4266149a501"
 
 "@types/jest@^23.3.1":
-  version "23.3.1"
-  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-23.3.1.tgz#a4319aedb071d478e6f407d1c4578ec8156829cf"
+  version "23.3.9"
+  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-23.3.9.tgz#c16b55186ee73ae65e001fbee69d392c51337ad1"
 
 "@types/node@*":
   version "10.9.4"
