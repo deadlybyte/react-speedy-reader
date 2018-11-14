@@ -5374,8 +5374,8 @@ react-dom@^16.4.2:
     prop-types "^15.6.0"
 
 react-hot-loader@^4.0.0:
-  version "4.3.6"
-  resolved "https://registry.yarnpkg.com/react-hot-loader/-/react-hot-loader-4.3.6.tgz#26e1491f08daf2bad99d141b1927c9faadef2fb4"
+  version "4.3.12"
+  resolved "https://registry.yarnpkg.com/react-hot-loader/-/react-hot-loader-4.3.12.tgz#0d56688884e7330c63a00a17217866280616b07a"
   dependencies:
     fast-levenshtein "^2.0.6"
     global "^4.3.0"
