@@ -1,0 +1,5 @@
+*       text=auto
+*.html  eol=lf
+*.js    eol=lf
+*.json  eol=lf
+*.yaml  eol=lf
