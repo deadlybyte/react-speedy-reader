@@ -56,7 +56,7 @@
     "eslint-plugin-jsx-a11y": "6.1.1",
     "eslint-plugin-react": "7.11.1",
     "husky": "^1.0.0-rc.13",
-    "jest": "^23.5.0",
+    "jest": "^27.0.4",
     "jsdoc": "^3.5.5",
     "minimist": "^1.2.0",
     "open-browser-webpack-plugin": "0.0.5",
